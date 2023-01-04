@@ -3,11 +3,11 @@ FROM python:3.11-alpine
 ENV TFENV_VERSION v2.2.3
 ENV TGENV_VERSION v0.0.3
 ENV TFLINT_VERSION v0.35.0
-ENV AZ_CLI_VERSION 2.43.0
+ENV AZURE_CLI_VERSION 2.43.0
 
 RUN apk add --no-cache curl bash unzip git openssh-client jq \
     gcc musl-dev python3-dev libffi-dev openssl-dev cargo make && \
-    pip install --upgrade pip && pip install azure-cli==${AZ_CLI_VERSION} && \
+    pip install --upgrade pip && pip install azure-cli==${AZURE_CLI_VERSION} && \
     curl --fail --silent -L -o /tmp/tfenv.zip https://github.com/tfutils/tfenv/archive/refs/tags/${TFENV_VERSION}.zip && \
     curl --fail --silent -L -o /tmp/tgenv.zip https://github.com/cunymatthieu/tgenv/archive/refs/tags/${TGENV_VERSION}.zip && \
     curl --fail --silent -L -o /tmp/tflint.zip https://github.com/terraform-linters/tflint/releases/download/${TFLINT_VERSION}/tflint_linux_amd64.zip && \

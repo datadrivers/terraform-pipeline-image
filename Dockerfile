@@ -1,8 +1,8 @@
 FROM python:3.11-alpine
 
-ENV TFENV_VERSION v2.2.3
+ENV TFENV_VERSION v3.0.0
 ENV TGENV_VERSION v0.0.3
-ENV TFLINT_VERSION v0.35.0
+ENV TFLINT_VERSION v0.44.1
 ENV AZURE_CLI_VERSION 2.43.0
 
 RUN apk add --no-cache curl bash unzip git openssh-client jq \

@@ -1,3 +1,9 @@
+## v0.2.1 (2023-01-05)
+
+### Fix
+
+- Fix usage of non root user
+
 ## v0.2.0 (2023-01-05)
 
 ### Feat

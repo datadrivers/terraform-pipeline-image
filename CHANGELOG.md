@@ -1,3 +1,9 @@
+## v0.2.2 (2023-01-05)
+
+### Fix
+
+- Use python 3.8 azure-cli requires python 3.5 -3.8
+
 ## v0.2.1 (2023-01-05)
 
 ### Fix

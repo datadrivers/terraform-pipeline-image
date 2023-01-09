@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3.11-alpine
 
 ENV TFENV_VERSION v3.0.0
 ENV TGENV_VERSION v0.0.3

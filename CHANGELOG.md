@@ -1,3 +1,9 @@
+## v0.3.0 (2023-07-05)
+
+### Feat
+
+- add kubectl for dockerfile
+
 ## v0.2.2 (2023-01-05)
 
 ### Fix

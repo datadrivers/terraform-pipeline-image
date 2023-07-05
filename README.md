@@ -8,3 +8,4 @@ This repository includes a image that include all needed tools for managing clou
 - tgenv
 - tflint
 - azure-cli
+- kubectl

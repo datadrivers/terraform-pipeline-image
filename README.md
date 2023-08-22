@@ -9,3 +9,4 @@ This repository includes a image that include all needed tools for managing clou
 - tflint
 - azure-cli
 - kubectl
+- sops

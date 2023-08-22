@@ -5,6 +5,7 @@ ENV TGENV_VERSION v0.0.3
 ENV TFLINT_VERSION v0.44.1
 ENV AZURE_CLI_VERSION 2.49.0
 ENV KUBECTL_VERSION v1.27.3
+ENV SOPS_VERSION v3.7.3
 
 RUN apk add --no-cache curl bash  git openssh-client jq unzip libffi-dev openssl-dev && \
     apk add --no-cache --virtual builddeps gcc musl-dev python3-dev cargo make && \
@@ -17,6 +18,10 @@ RUN apk add --no-cache curl bash  git openssh-client jq unzip libffi-dev openssl
     rm -rf /tmp/* && apk del builddeps && \
     tflint --version && az --version && \
     adduser -g "iac-executor" -D iac-executor
+
+RUN curl -Lo ./sops https://github.com/getsops/sops/releases/download/${SOPS_VERSION}/sops-${SOPS_VERSION}.linux && \
+    chmod +x ./sops && \
+    mv ./sops /usr/local/bin
 
 USER iac-executor
 WORKDIR /home/iac-executor

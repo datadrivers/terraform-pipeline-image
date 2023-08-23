@@ -17,9 +17,8 @@ RUN apk add --no-cache curl bash  git openssh-client jq unzip libffi-dev openssl
     unzip -u /tmp/tflint -d /usr/local/bin && \
     rm -rf /tmp/* && apk del builddeps && \
     tflint --version && az --version && \
-    adduser -g "iac-executor" -D iac-executor
-
-RUN curl -Lo ./sops https://github.com/getsops/sops/releases/download/${SOPS_VERSION}/sops-${SOPS_VERSION}.linux && \
+    adduser -g "iac-executor" -D iac-executor && \
+    curl -Lo ./sops https://github.com/getsops/sops/releases/download/${SOPS_VERSION}/sops-${SOPS_VERSION}.linux && \
     chmod +x ./sops && \
     mv ./sops /usr/local/bin
 

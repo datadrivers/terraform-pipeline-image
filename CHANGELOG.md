@@ -1,3 +1,12 @@
+## v0.4.0 (2023-08-23)
+
+### Feat
+
+- add run command for sops in dockerfile
+- update sops command in dockerfile
+- update readme file with sops tool
+- add sops to dockerfile
+
 ## v0.3.0 (2023-07-05)
 
 ### Feat

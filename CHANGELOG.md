@@ -1,3 +1,13 @@
+## v0.5.0 (2025-06-10)
+
+### Feat
+
+- add pre-commit yamlfmt and hooks
+
+### Fix
+
+- add pre-commit tool to readme
+
 ## v0.4.0 (2023-08-23)
 
 ### Feat

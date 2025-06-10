@@ -4,9 +4,10 @@ This repository includes a image that include all needed tools for managing clou
 
 ## Installed Tools
 
-- tfenv
-- tgenv
-- tflint
 - azure-cli
 - kubectl
+- pre-commit
 - sops
+- tfenv
+- tflint
+- tgenv

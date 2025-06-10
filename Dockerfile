@@ -2,14 +2,15 @@ FROM python:3.8-alpine
 
 ENV TFENV_VERSION v3.0.0
 ENV TGENV_VERSION v0.0.3
-ENV TFLINT_VERSION v0.44.1
-ENV AZURE_CLI_VERSION 2.49.0
-ENV KUBECTL_VERSION v1.27.3
-ENV SOPS_VERSION v3.7.3
+ENV TFLINT_VERSION v0.58.0
+ENV AZURE_CLI_VERSION 2.74.0
+ENV KUBECTL_VERSION v1.31.0
+ENV SOPS_VERSION v3.10.2
+ENV PRE_COMMIT_VERSION 4.2.0
 
 RUN apk add --no-cache curl bash  git openssh-client jq unzip libffi-dev openssl-dev && \
     apk add --no-cache --virtual builddeps gcc musl-dev python3-dev cargo make && \
-    pip install --upgrade pip && pip install azure-cli==${AZURE_CLI_VERSION} && \
+    pip install --upgrade pip && pip install azure-cli==${AZURE_CLI_VERSION} && pip install pre-commit==${PRE_COMMIT_VERSION} && \
     curl --fail --silent -L -o /tmp/tflint.zip https://github.com/terraform-linters/tflint/releases/download/${TFLINT_VERSION}/tflint_linux_amd64.zip && \
     curl -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl && \
     chmod +x ./kubectl && \
